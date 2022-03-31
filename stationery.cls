@@ -1,5 +1,5 @@
 % Intro Options
-\ProvidesClass{plushcv}[2021/11/30 CV class]
+\ProvidesClass{stationery}[2022/03/31 resume class]
 \NeedsTeXFormat{LaTeX2e}
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption*{%
@@ -15,11 +15,6 @@
 \usepackage{graphicx}
 \usepackage{pifont}
 \usepackage[document]{ragged2e}
-
-
-% Publications
-\usepackage{cite}
-\renewcommand\refname{\vskip -1.5cm}
 
 % Color definitions
 \usepackage[usenames,dvipsnames]{xcolor}
