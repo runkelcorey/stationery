@@ -1,0 +1,105 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% stationery - One-page, Two-column Resume with Clean Lines
+% LaTeX Template
+% Version 1.0 (2022-03-31)
+%
+% Author:
+% Corey Runkel (runkelcorey.github.io)
+%
+% Hacked together from:
+% https://github.com/sansquoi/PlushCV
+% https://github.com/deedydas/Deedy-Resume
+% https://github.com/liantze/AltaCV
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the vertical limit.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Icons: https://icons8.com/icons/carbon-copy
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{stationery-letter}
+\usepackage{setspace}
+\singlespacing
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\namesection{Corey}{Runkel}{Data Scientist}{\contactline{\href{https://www.home.me}{runkelcorey.github.io}}{}{}{\href{mailto:runkelcorey@gmail.com}{runkelcorey@gmail.com}}{\href{tel:+17038533571}{(703)853-3571}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.70\textwidth}
+    \begin{onehalfspace}
+        \parskip 1.3ex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LETTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \sectionsep
+        \subsection{Dear Analytics Team:}
+        \sectionsep
+        I write to fill your Data Analyst opening.
+        My skillset---equal parts data science and communication---will thrive in an analytics role that depends on working across teams to solve problems.
+        This opportunity would help me narrow the gap between my work and its impact and join an early-stage company that's changing architecture (as someone with the appreciation, but not the talent, to work the creative side of architecture/urban design, I've been searching for a way to get involved).
+
+        I have experience extracting, managing, analyzing, reporting, mapping, and visualizing program data from a variety of sources to support business and research priorities.
+        At the American Road \& Transportation Builders Association, I scripted a data pipeline that input public GIS data to a SQLite database so that we could map the need for, and impact of, policies in Congressional districts.
+        That role also saw me perform analyses used in Congressional testimony and interface with stakeholders inside and outside of the organization.
+        The following school year, I built on this experience for my \href{https://runkelcorey.github.io/publication/thesis/outcome.html#outcome}{thesis} on the foreclosure crisis, which used R analyze housing data in 27,000 Census tracts.
+
+        I now research at Yale University, where I write case studies that review worldwide responses to financial crises.
+        After 15 cases, I have grown skilled at tailoring data visualizations and technical details for decisionmakers.
+        Each case sees me dive into the institutional quirks that produced a program, understand how it was administered, and work with my supervisors to communicate those features as clearly as possible.
+        But, we work in a growing lab with limited technical resources.
+        My favorite work has been addressing requests from colleagues by building API clients to extract usage data from webpages, \href{https://github.com/runkelcorey/valet}{databases}, and \href{https://github.com/runkelcorey/ela}{PDFs}.
+        Or, in another project, persuading colleagues to adopt data-management software, writing code to integrate it with our existing workflows, and responding to feedback with updates and clear documentation.
+        These have taught me how to meet people where they are technically and how to approach the data needs of colleagues in different roles.
+
+        I can manage data projects, understand the technical and data requirements for solving a particular problem, and communicate my work with senior leadership.
+        I want to make a career leveraging data to support architecture/urban design, and this position fits that role perfectly.
+
+        \sectionsep
+
+        \location{Thank you for your consideration,}
+        \includegraphics{script/initials.pdf}
+
+    \end{onehalfspace}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill {\color{primary}\vline} \hfill
+\begin{minipage}[t]{0.25\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RECIPIENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\sectionsep
+\sectionsep
+\section{Kin + Carta}
+\subsection{600 Atlantic Ave. \\ Boston, MA 22010}
+%descript{}
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
+

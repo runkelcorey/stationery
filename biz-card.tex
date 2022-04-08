@@ -1,0 +1,111 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     FRONT
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% !TEX TS-program = xelatex
+\documentclass[10pt,twoside,final]{article}
+
+% set all margins to 0 and set business card size
+\usepackage[paperwidth=2in,paperheight=3.5in,margin=.5cm,noheadfoot]{geometry}
+\pagestyle{empty}
+\setlength{\baselineskip}{0cm}
+\setlength{\topskip}{0pt}
+
+\usepackage{parskip}         % remove paragraph indents
+\usepackage{fontspec}        % load external fonts
+\usepackage[document]{ragged2e} %spacing
+\usepackage{graphicx}
+
+% load external font
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Main Title Font Definitions
+%Used for Name  and Section Headings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Main Font Definitions
+\def \pathmainfont {fonts/sourcesanspro/}
+\def \mainfont {SourceSansPro-Light}
+\def \mainfontbold {SourceSansPro-SemiBold}
+% \def \mainbolditalicfont {}
+% \def \mainitalicfont {}
+\def \mainfontsize {9.5}
+\def \mainsansfont {SourceSansPro-Light}
+
+%Main Subheading Font Definitions
+%Used for company name and sub-skills
+\def \pathsubheadingfont {\pathmainfont}
+\def \subheadingfont {\mainfontbold}
+\def \subheadingsize {12}
+
+%Main Job Descriptor and Location Font Definitions
+%Used for company name and sub-skills
+\def \pathdescriptorfont {\pathsubheadingfont}
+\def \descriptorfont {\mainfont}
+\def \descriptorsize {10}
+\def \pathlocationfont {\pathsubheadingfont}
+\def \locationfont {\subheadingfont}
+\def \locationsize {8pt}
+
+%Main Monospace Font Definitions 
+%Used for Job Title and Contact Line 
+\def \pathmonofont {fonts/officecodeprod/}
+\def \monofont {OfficeCodeProD-Light}
+
+
+% Set main fonts
+\usepackage{fontspec}
+\setmainfont[Color=primary, Path = \pathmainfont,BoldFont=\mainfontbold,UprightFeatures={SizeFeatures={Size=\mainfontsize}},
+  BoldFeatures={SizeFeatures={Size=\mainfontsize}}]{\mainfont}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text, Path = \pathmainfont,UprightFeatures={SizeFeatures={Size=\mainfontsize}}
+  ]{\mainsansfont}
+
+% define some lengths for internal spacing
+\newlength{\seplinewidth}    \setlength{\seplinewidth}{2cm}
+\newlength{\seplineheight}   \setlength{\seplineheight}{1pt}
+\newlength{\seplinedistance} \setlength{\seplinedistance}{0.3cm}
+
+% Color definitions
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{date}{HTML}{666666}
+\definecolor{title}{HTML}{1D76E2}
+\definecolor{primary}{HTML}{2b2b2b}
+\definecolor{headings}{HTML}{6A6A6A}
+\definecolor{subheadings}{HTML}{333333}
+\usepackage{qrcode}
+
+% Name command
+\newcommand{\namesection}[3]{
+\RaggedRight{
+\color{title}
+\fontsize{40pt}{50pt}
+\fontspec[Path = \pathmainfont]{\mainfontbold}\selectfont #1 
+\fontspec[Path = \pathmainfont]{\mainfont}\selectfont #2
+} 
+
+
+\RaggedRight{\fontspec[Path = \pathmonofont]{\monofont}\fontsize{12pt}{124pt}\selectfont #3}
+
+}
+
+
+\begin{document}
+  \pagecolor{white}
+  \namesection{Corey}{Runkel}{Data Scientist}
+  \vfill
+  \hrule
+  \vfill
+  \textcolor{title}{\qrcode[hyperlink,height=4cm]{https://runkelcorey.github.io/static/cnr.vcf}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     BACK
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \pagebreak
+  \pagecolor{title}
+  \vspace*{\fill}
+  \includegraphics[angle=90,origin=c]{script/initialwhite}\centering
+  \vspace*{\fill}
+\end{document}

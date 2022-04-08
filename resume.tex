@@ -21,21 +21,18 @@
 %%Icons: https://icons8.com/icons/carbon-copy
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[]{stationery}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
+\documentclass{stationery-resume}
 \begin{document}
 
+\lastupdated
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %     TITLE NAME
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\namesection{Firstname}{Lastname}{Full Stack Software Engineer}{\contactline{\href{https://www.home.me}{homepage.com}}{\href{https://www.github.com/sansquoi}{sansquoi}}{\href{https://www.linkedin.com/}{li-username}}{\href{mailto:first.last@mail.com}{first.last@email.com}}{\href{tel:+1999999999}{9999999999}}}
+\namesection{Corey}{Runkel}{Data Scientist}{\contactline{\href{https://www.home.me}{runkelcorey.github.io}}{}{}{\href{mailto:runkelcorey@gmail.com}{runkelcorey@gmail.com}}{\href{tel:+17038533571}{(703)853-3571}}}
 
-% \namesection{Firstname}{Lastname}{Full Stack Software Engineer}{\contactline{\href{https://www.mazumder.me}{mazumder.me}}{\href{https://www.github.com/sansquoi}{sansquoi}}{\href{https://www.linkedin.com/mazumders}{mazumders}}{\href{mailto:shubham.mazumder@gmail.com}{first.last@email.com}}{\href{tel:+1999999999}{9999999999}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -44,15 +41,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{minipage}[t]{0.70\textwidth} 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EXPERIENCE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Experience}
-\runsubsection{Weyland Yutani Industries}
-\descript{| Program Manager}
+\subsection{Weyland Yutani Industries}
+\descript{Program Manager}
 \location{May 2021 – Current | Tokyo, Japan}
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightemize}
@@ -82,8 +77,9 @@
 \item Ut consectetur tempus tincidunt. Curabitur in felis et leo elementum facilisis at non metus. Vestibulum et ullamcorper augue, nec accumsan tellus.
  rhoncus.
 \end{tightemize}
-\sectionsep
 
+\sectionsep
+{\color{primary}\hrulefill}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     Projects
@@ -128,14 +124,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{minipage} 
-\hfill
+\hfill {\color{primary}\vline} \hfill
 \begin{minipage}[t]{0.25\textwidth} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     SKILLS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Skills}
+\section{skills}
 \subsection{Programming}
 \sectionsep
 \location{Proficient:}
@@ -148,12 +144,12 @@ Python \textbullet{} \LaTeX\ \textbullet{}  C++  \\
 Java \textbullet{}  Shell \textbullet{} Assembly \\
 \sectionsep
 \sectionsep
-\subsection{Libraries/Frameworks}
+\subsection{R Libraries}
 \sectionsep
 jQuery \textbullet{} Node.js \textbullet{} Jekyll \textbullet{} React \\
 \sectionsep
 \sectionsep
-\subsection{Tools/Platforms}
+\subsection{Tools}
 \sectionsep
 Git \textbullet{} Gulp \textbullet{} Webpack \textbullet{} Heroku    \\ Wordpress \textbullet{} Docker \\
 
@@ -163,27 +159,20 @@ Git \textbullet{} Gulp \textbullet{} Webpack \textbullet{} Heroku    \\ Wordpres
 %     EDUCATION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Education} 
-\subsection{University of Utah}
-\descript{Master's in Computer Science}
-\location{Jan 2021 - Present | SLC, Utah}
-School of Computing \\
-\location{ Cum. GPA: 3.85 / 4.0 }
-
-\sectionsep
-\subsection{University of Oregon}
-\descript{Bachelor's in Computer Science 
-\\and Engineering}
-\location{May 2016 | Corvallis, OR}
-School of Computing \\
-\location{ Cum. GPA: 3.7 / 4.0 }
-\sectionsep
+\section{education} 
+\subsection{University of Virginia}
+\descript{B.A. with High Distinction}
+\location{August 2016 - May 2020}
+Political \& Social Thought \\
+Economics \\
+Math (minor) \\
+\location{GPA: 3.7 / 4.0}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %     REFERENCES
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{References} 
+\section{references} 
 \href{https://www.linkedin.com/company/john-doe/}{\textbf{John Doe}, Senior Software Developer, Tyrell Corp}
 \begingroup
 \setbox0=\hbox{
@@ -236,5 +225,5 @@ School of Computing \\
 % Software Engineering \\
 
 \end{minipage} 
-\end{document}  \documentclass[]{article}
+\end{document}
 

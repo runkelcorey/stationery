@@ -1,5 +1,5 @@
 % Intro Options
-\ProvidesClass{stationery}[2022/03/31 resume class]
+\ProvidesClass{stationery-letter}[2022/04/01 letter class]
 \NeedsTeXFormat{LaTeX2e}
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption*{%
@@ -28,113 +28,38 @@
 %Main Title Font Definitions
 %Used for Name  and Section Headings
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\def \pathtitlefont {fonts/sourcesanspro/} 
-\def \firstnamefont {sourcesanspro-SemiBold}
-\def \secondnamefont {sourcesanspro-light}
-\def \titlefont {\firstnamefont}
+\def \titlefont {\mainfontbold}
 \def \namefontsize {9.5}
 
-%% Office Code Pro D Title:
-%%%%%%%%%%%%%%%%%%%%%%%%%
-% \def \pathtitlefont {fonts/officecodeprod/} 
-% \def \firstnamefont {officecodeprod-medium}
-% \def \secondnamefont {officecodeprod-regular}
-% \def \titlefont {\firstnamefont}
-% \def \namefontsize {9.5}
-
-
-%% Source Sans Pro Title:
-%%%%%%%%%%%%%%%%%%%%%%%%%
-% \def \pathtitlefont {fonts/sourcesanspro/} 
-% \def \firstnamefont {sourcesanspro-SemiBold}
-% \def \secondnamefont {sourcesanspro-light}
-% \def \titlefont {\firstnamefont}
-% \def \namefontsize {9.5}
-
-%% Source Serif Pro Title:
-%%%%%%%%%%%%%%%%%%%%%%%%%
-% \def \pathtitlefont {fonts/sourceserifpro/} 
-% \def \firstnamefont {sourceserifpro-SemiBold}
-% \def \secondnamefont {sourceserifpro-light}
-% \def \titlefont {\firstnamefont}
-% \def \namefontsize {9.5}
-
-%% Prata Title:
-%%%%%%%%%%%%%%%%%%%%%%%%%
-% \def \pathtitlefont {fonts/prata/} 
-% \def \firstnamefont {prata-regular}
-% \def \secondnamefont {prata-regular}
-% \def \titlefont {\firstnamefont}
-% \def \namefontsize {9.5}
-
-%% Marcellus Title:
-%%%%%%%%%%%%%%%%%%%%%%%%%
-% \def \pathtitlefont {fonts/marcellus/} 
-% \def \firstnamefont {Marcellus-Regular}
-% \def \secondnamefont {Marcellus-Regular}
-% \def \titlefont {\firstnamefont}
-% \def \namefontsize {9.5}
-
-%% AbrilFatface Title:
-%%%%%%%%%%%%%%%%%%%%%%%%%
-% \def \pathtitlefont {fonts/abril_fatface/} 
-% \def \firstnamefont {AbrilFatface-Regular}
-% \def \secondnamefont {AbrilFatface-Regular}
-% \def \titlefont {\firstnamefont}
-% \def \namefontsize {9.5}
-
-%% Merriweather Title:
-%%%%%%%%%%%%%%%%%%%%%%%%%
-% \def \pathtitlefont {fonts/merriweather/} 
-% \def \firstnamefont {Merriweather-Regular}
-% \def \secondnamefont {Merriweather-Light}
-% \def \titlefont {\firstnamefont}
-% \def \namefontsize {9.5}
-
-%% Merriweather Title:
-%%%%%%%%%%%%%%%%%%%%%%%%%
-% \def \pathtitlefont {fonts/oxygen/} 
-% \def \firstnamefont {Oxygen-Regular}
-% \def \secondnamefont {Oxygen-Light}
-% \def \titlefont {\firstnamefont}
-% \def \namefontsize {9.5}
-
-%% Inter Title:
-%%%%%%%%%%%%%%%%%%%%%%%%%
-% \def \pathtitlefont {fonts/inter/} 
-% \def \firstnamefont {Inter-SemiBold}
-% \def \secondnamefont {inter-light}
-% \def \titlefont {\firstnamefont}
-% \def \namefontsize {9.5}
-
 %Main Font Definitions
-\def \pathmainfont {fonts/inter/}
-\def \mainfont {inter-light}
-\def \mainfontbold {inter-semibold}
+\def \pathmainfont {fonts/sourcesanspro/}
+\def \mainfont {SourceSansPro-Regular}
+\def \mainfontbold {SourceSansPro-SemiBold}
+\def \mainfontlight {SourceSansPro-Light}
 % \def \mainbolditalicfont {}
 % \def \mainitalicfont {}
-\def \mainfontsize {9.5}
-\def \mainsansfont {inter-light}
+\def \mainfontsize {11}
+\def \mainsansfont {SourceSansPro-Regular}
 
 %Main Subheading Font Definitions
 %Used for company name and sub-skills
-\def \pathsubheadingfont {\pathtitlefont}
+\def \pathsubheadingfont {\pathmainfont}
 \def \subheadingfont {\titlefont}
 \def \subheadingsize {12}
 
 %Main Job Descriptor and Location Font Definitions
 %Used for company name and sub-skills
 \def \pathdescriptorfont {\pathsubheadingfont}
-\def \descriptorfont {\secondnamefont}
+\def \descriptorfont {\mainfontlight}
 \def \descriptorsize {10}
 \def \pathlocationfont {\pathsubheadingfont}
 \def \locationfont {\subheadingfont}
-\def \locationsize {8pt}
+\def \locationsize {9pt}
 
 %Main Monospace Font Definitions 
 %Used for Job Title and Contact Line 
-\def \pathmonofont {fonts/officecodeprod/}
-\def \monofont {OfficeCodeProD-Light}
+\def \pathmonofont {fonts/sourcecodepro/}
+\def \monofont {SourceCodePro-Light}
 
 
 % Set main fonts
@@ -149,20 +74,18 @@
 \usepackage[UKenglish]{isodate}
 \setlength{\TPHorizModule}{1mm}
 \setlength{\TPVertModule}{1mm}
-\newcommand{\lastupdated}{\begin{textblock}{60}(155,5)
+\newcommand{\lastupdated}{\begin{textblock}{60}(170,5)
 \color{date}\fontspec[Path = \pathmainfont]{\mainfont}\fontsize{8pt}{10pt}\selectfont 
 Last Updated on \today
 \end{textblock}}
 
 % Name command
-
-
 \newcommand{\namesection}[4]{
 \RaggedRight{
 \color{title}
 \fontsize{50pt}{60pt}
-\fontspec[Path = \pathtitlefont]{\firstnamefont}\selectfont #1 
-\fontspec[Path = \pathtitlefont]{\secondnamefont}\selectfont #2
+\fontspec[Path = \pathmainfont]{\mainfontbold}\selectfont #1 
+\fontspec[Path = \pathmainfont]{\mainfontlight}\selectfont #2
 } \\[5pt]
 
 \noindent\makebox[\linewidth]{\color{title}\rule{\paperwidth}{0pt}}
@@ -181,13 +104,13 @@ Last Updated on \today
 
 % Section separators
 \usepackage{titlesec}
-\titlespacing{\section}{0pt}{5pt}{5pt}
+\titlespacing{\section}{0pt}{5pt}{2pt}
 \titlespacing{\subsection}{0pt}{0pt}{0pt}
 \newcommand{\sectionsep}{\vspace{5pt}}
 
 % Headings command
 \titleformat{\section}{\color{title}
-\scshape\fontspec[Path = \pathtitlefont]{\titlefont}\fontsize{16pt}{24pt}\selectfont \raggedright}{}{0em}{}
+\scshape\fontspec[Path = \pathmainfont]{\titlefont}\fontsize{16pt}{18pt}\selectfont \raggedright}{}{0em}{}
 
 % Subheadings command
 \titleformat{\subsection}{
@@ -223,6 +146,6 @@ Last Updated on \today
 
 % Bullet Lists with fewer gaps command
 \newenvironment{tightemize}{
-\vspace{-\topsep}\begin{itemize}[label=\ding{212}]\itemsep1pt \parskip0pt \parsep0pt}
+\vspace{-\topsep}\begin{itemize}[label=\char{2022}]\itemsep1pt \parskip0pt \parsep0pt}
 {\end{itemize}\vspace{-\topsep}}
 
